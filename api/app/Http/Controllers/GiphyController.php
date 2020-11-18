@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Services;
+
 class GiphyController extends Controller
 {
     private $giphy_service;
