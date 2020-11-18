@@ -17,4 +17,8 @@ $router->get('/', function () use ($router) {
     return $router->app->version();
 });
 
-$router->get('health', 'HealthController@getAction');
+
+$router->get('gifs/{name}', 'GiphyController@getGifs');
+$router->get('stickers/{name}', 'GiphyController@getStickers');
+$router->get('gifstrends', 'GiphyController@getGifsTrending');
+$router->get('stickerstrends', 'GiphyController@getStickersTrending');
