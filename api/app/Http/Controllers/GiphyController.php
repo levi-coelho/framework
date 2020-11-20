@@ -14,21 +14,21 @@ class GiphyController extends Controller
     
     public function getGifs(string $name)
     {
-        return response()->json($this->client->getGifs($name));
+        return response()->json($this->giphy_service->getGifs($name));
     }
 
     public function getStickers(string $name)
     {
-        return response()->json($this->client->getStickers($name));
+        return response()->json($this->giphy_service->getStickers($name));
     }
 
     public function getTrendingGifs()
     {
-        return response()->json($this->client->getTrendingGifs());
+        return response()->json($this->giphy_service->getTrendingGifs());
     }
 
     public function getTrendingStickers()
     {
-        return response()->json($this->client->getTrendingStickers());
+        return response()->json($this->giphy_service->getTrendingStickers());
     }
 }

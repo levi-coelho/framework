@@ -20,5 +20,5 @@ $router->get('/', function () use ($router) {
 
 $router->get('gifs/{name}', 'GiphyController@getGifs');
 $router->get('stickers/{name}', 'GiphyController@getStickers');
-$router->get('gifstrends', 'GiphyController@getGifsTrending');
-$router->get('stickerstrends', 'GiphyController@getStickersTrending');
+$router->get('gifstrends', 'GiphyController@getTrendingGifs');
+$router->get('stickerstrends', 'GiphyController@getTrendingStickers');

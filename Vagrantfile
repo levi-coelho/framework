@@ -22,7 +22,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       backend.vm.network "forwarded_port", guest: 80, host: 8080
       backend.vm.synced_folder ".", "/vagrant", disabled: true
       backend.vm.synced_folder "api", "/nfs-vagrant", type: "nfs"
-      backend.vm.synced_folder "api", "/var/www/api", disabled: false
+      backend.vm.synced_folder "api", "/var/www/api", owner: "www-data", group: "www-data", disabled: false
 #      backend.vm.synced_folder ".", "/var/www/api/var/cache", disabled: true
       backend.vm.provision "shell", inline: "sudo apt-get update && 
                                                sudo apt-get -y install python2.7 python-simplejson
