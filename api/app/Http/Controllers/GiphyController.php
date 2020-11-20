@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Services;
+use App\Services\GiphyService;
 
 class GiphyController extends Controller
 {
